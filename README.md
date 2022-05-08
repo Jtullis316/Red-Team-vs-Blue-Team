@@ -7,7 +7,7 @@ I created mitigation measures for each exploit that I've successfully performed.
 ## Red Team
 
 
--	I ran the command ifconfig to find the IP address of the capstone machine, which was the machine we were attacking.
+-	I ran the command --ifconfig to find the IP address of the capstone machine, which was the machine we were attacking.
 
 -	I then ran a Nmap command nmap -sV 192.168.1.105 to find the open ports
 
