@@ -36,7 +36,7 @@ I created mitigation measures for each exploit that I've successfully performed.
 
 -	I then clicked on the shell on the website after I ran the Metasploit and I was able now to now get remote access to the target machine.
 
--	I then ran the command shell and went back to the root directory and then listed the directories and found the flag.
+-	I then ran the command ***shell*** and went back to the root directory and then listed the directories and found the flag.
 
 
 
