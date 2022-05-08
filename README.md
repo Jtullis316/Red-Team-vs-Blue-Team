@@ -67,19 +67,25 @@ I created mitigation measures for each exploit that I've successfully performed.
 	-	162,551 packets were sent from the machine 192.168.1.90
 	-	The massive rise in the network traffic indicates that it is a Port Scan
 
+![Port Scan](https://user-images.githubusercontent.com/92223941/167281697-d81d864f-0edc-4bc9-a8a3-e780750f5eba.PNG)
+
 -	Analysis: Finding the Request for the hidden directory
 	-	The requested occurred for this URL path on April 6 12 and there were 99,596 requests made to it
 	-	The file that was requested was the secret_folder and it contained the hashed password for Ryan's account and the web address to login into
+
+![http request](https://user-images.githubusercontent.com/92223941/167281725-b7ed6d0c-a722-4e69-b8e9-336be079fc9a.PNG)
 
 -	Analysis: Uncovering the Brute Force Attack
 	-	99,596 requests were made during the brute force attack to get into the secret folder directory
 	-	99,577 requests were made before the attacker found out the password
 
+![brute force attack blue team](https://user-images.githubusercontent.com/92223941/167281750-4c8eb6bf-d727-4fc0-a298-ea743b98926a.PNG)
+
 -	Analysis: Finding the WebDAV Connection
 	-	60 requests were made to this directory
 	-	Shell files were requested
 
-
+![webdav](https://user-images.githubusercontent.com/92223941/167281770-7b3f00c8-18da-4851-9339-833991e72a6b.PNG)
 
 ## Blue Team Proposed Alarms and Mitigation Strategies
 
