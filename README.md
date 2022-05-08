@@ -61,7 +61,7 @@ I created mitigation measures for each exploit that I've successfully performed.
 
 
 
-Blue Team Proposed Alarms and Mitigation Strategies
+## Blue Team Proposed Alarms and Mitigation Strategies
 
 -	Mitigation: Blocking the Port Scan
 	-	Alarm
