@@ -9,9 +9,11 @@ I created mitigation measures for each exploit that I've successfully performed.
 
 -	I ran the command ***ifconfig*** to find the IP address of the capstone machine, which was the machine we were attacking.
 
-![image](https://user-images.githubusercontent.com/92223941/167281224-191e434b-d94f-4a4b-a6fd-3515a2e9c02d.png)
+![1a](https://user-images.githubusercontent.com/92223941/167281275-93a49077-e4fd-49b8-abb8-5996739eb5d8.PNG)
 
 -	I then ran a Nmap command ***nmap -sV 192.168.1.105*** to find the open ports
+
+![image](https://user-images.githubusercontent.com/92223941/167281224-191e434b-d94f-4a4b-a6fd-3515a2e9c02d.png)
 
 -	I then went into the website to see to find any important directories. I was able to find a hidden directory at 192.168.1.105/company_folders/secret_folder that you need to login into as Ashton.
 
