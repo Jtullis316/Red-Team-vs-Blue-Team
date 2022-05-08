@@ -11,4 +11,4 @@ I created mitigation measures for each exploit that I've successfully performed.
 
 -	I then ran a Nmap command nmap -sV 192.168.1.105 to find the open ports
 
-  -	I then went into the website to see to find any important directories. I was able to find a hidden directory at 192.168.1.105/company_folders/secret_folder that you need to login into as Ashton.
+        -	I then went into the website to see to find any important directories. I was able to find a hidden directory at 192.168.1.105/company_folders/secret_folder that you need to login into as Ashton.
